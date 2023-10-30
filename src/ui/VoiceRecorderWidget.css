@@ -1,0 +1,252 @@
+/******************************************* Common classes *********************************************/
+p {
+    margin: 0 !important;
+    white-space: nowrap;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.max-width-100 {
+    max-width: 100%;
+}
+
+.center-content {
+    align-items: center;
+}
+
+.end-items {
+    justify-content: flex-end;
+}
+
+.sm-text {
+    font-size: 14px;
+}
+/******************************************* Main style *********************************************/
+.items-container {
+    display: flex;
+    align-items: center;
+    gap: 15px 60px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.error-msg {
+    font-size: 13px;
+    color: red;
+}
+
+.flex-containers {
+    display: flex;
+    gap: 10px;
+}
+
+.space-items {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.recording {
+    margin-left: 4px !important;
+}
+
+.not-clickable {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.not-clickable svg {
+    cursor: not-allowed !important;
+}
+
+.duration-container {
+    position: relative;
+    min-width: fit-content;
+}
+
+.warning {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 14px;
+    color: red;
+    top: 15px;
+    animation: flashing 1s infinite;
+}
+
+.process-icon {
+    cursor: pointer;
+}
+
+/******************************************* Range Input *********************************************/
+.timeline-slider[type="range"] {
+    -webkit-appearance: none;
+    background-color: inherit;
+    width: 100%;
+}
+
+.timeline-slider[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    -webkit-appearance: none;
+    background-color: inherit;
+    border-top: 1px solid #696969;
+    cursor: pointer;
+}
+
+.timeline-slider[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: -5.5px;
+    background-color: #d04a02 !important;
+}
+
+.timeline-slider[type="range"]::-moz-range-progress {
+    background-color: #d04a02 !important;
+}
+
+.timeline-slider[type="range"]::-moz-range-track {
+    background-color: #d04a02 !important;
+}
+
+/******************************************* Recording Slider *********************************************/
+.record-process {
+    width: 300px;
+    max-width: 100%;
+    height: 2px;
+    border-top: 2px dashed #000;
+    animation: flashing 1s infinite;
+}
+
+@keyframes flashing {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/******************************************* Loading Animation *********************************************/
+.loading-lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.loading-lds-ellipsis div {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loading-lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.loading-lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.loading-lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.loading-lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+/******************************************** Recording Animation ********************************************/
+.recording-lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.recording-lds-ripple div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.recording-lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    5% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+    }
+}

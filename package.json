@@ -1,0 +1,34 @@
+{
+  "name": "voicerecorderwidget",
+  "widgetName": "VoiceRecorderWidget",
+  "version": "1.0.3",
+  "description": "VoiceRecorderWidget",
+  "copyright": "2020 Mendix Technology BV",
+  "author": "Sura, Ahlam, Aseel, Baha'a",
+  "config": {
+    "projectPath": "../../",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "mendix",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server --open",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^8.12.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "classnames": "^2.2.6",
+    "recordrtc": "^5.6.2"
+  }
+}
